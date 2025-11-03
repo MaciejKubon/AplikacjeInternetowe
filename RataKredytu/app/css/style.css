@@ -1,0 +1,45 @@
+body{
+    background-color: beige;
+}
+header{
+    display: flex;
+    justify-content: center;
+}
+section{
+    margin-top: 25px;
+    display: flex;
+    width: 40%;
+    margin-left: 25%;
+    justify-content: center;
+    background-color: cornsilk;
+    border: 1px solid #ff8888;
+    border-radius: 10px;
+    padding: 20px 5%;
+    flex-wrap: wrap;
+}
+form{
+    width: 100%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 25px;
+
+}
+label{
+    margin-top: 10px;
+}
+input[type="number"], select{
+    height: 25px
+}
+input[type="submit"]{
+    background-color: greenyellow;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 25px 10px 25px;
+}
+input[type="submit"]:hover{
+    cursor: pointer;
+    box-shadow: 0 0 10px greenyellow;
+}
+div{
+    font-size: 25px;
+}
