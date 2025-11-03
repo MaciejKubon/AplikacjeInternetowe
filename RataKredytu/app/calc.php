@@ -31,11 +31,20 @@ if (empty( $messages )) {
     }
 
 }
-
+$amount= intval($amount);
+$loan_period = intval($loan_period);
+$interest = intval($interest);
+if($amount<=0){
+    $messages [] = 'Kwota kredytu jest mniejsza bądź równa zero';
+}
+if($loan_period<=0){
+    $messages [] = 'Liczba rat jest mniejsza bądź równa zero';
+}
+if($interest<=0){
+    $messages [] = 'Oprocentowanie jest mniejsze bądź równe zero';
+}
 if (empty ( $messages )) {
-    $amount= intval($amount);
-    $loan_period = intval($loan_period);
-    $interest = intval($interest)/100;
+    $interest = $interest/100;
     $monthly_interest_rate = $interest/12;
     $raw_installment =
         $amount * (

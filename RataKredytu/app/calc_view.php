@@ -13,9 +13,9 @@
 <section id="credit_form">
     <form action="<?php print(_APP_URL);?>/app/calc.php" method="post">
         <label for="id_amount">Kwota kredytu: </label>
-        <input id="id_amount" type="number" name="amount" value="<?php print($amount); ?>" /> zł <br />
+        <input id="id_amount" type="number" name="amount" value="<?php if (isset($amount)) print($amount); ?>" /> zł <br />
         <label for="id_loan_period">Okres kredytu (w miesiącach): </label>
-        <input id="id_loan_period" type="number" name="loan_period" value="<?php print($loan_period); ?>" /><br />
+        <input id="id_loan_period" type="number" name="loan_period" value="<?php if (isset($loan_period)) print($loan_period); ?>" /><br />
         <label for="id_interest">Oprocentowanie: </label>
         <select id="id_interest" name="interest">
             <option value="2" <?php if (isset($interest) && $interest == 2) echo 'selected'; ?>>2%</option>
